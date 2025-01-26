@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<main>
+    <h1 class="main-title">Оголошення</h1>
+    <p class="intro-text">Перегляньте актуальні пропозиції:</p>
+    <div class="listings">
+        {% for listing in listings %}
+        <div class="listing-card">
+            <h2 class="listing-title">{{ listing.title }}</h2>
+            <p class="listing-price">Ціна: <span>{{ listing.price }}</span></p>
+            <p class="listing-location">Розташування: <span>{{ listing.location }}</span></p>
+            <div class="listing-images">
+                <img src="{{ url_for('static', filename='ed1ca3976142f9b9df7358d78a8a31e2.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='db1a1a6c10454e4604e11ac5fd08c93e.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='cfe0a1ebea53f9ec2db5e8d240d0e7f9.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='08009553bf2f72f6358c1f0638d7cf18.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='742620b5f3d25457084b7da8e4632762.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='8197a3da2ec083800b76e2e496537349.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='58b46bead29e9d89f2a2973aad81b708.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='24e4d47c7d202a2809069ec7f065d2b8.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='16f4fa6b5d33e6ba156c8716ee040a07.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='9e50a72396ad13f42426b349f4e6d243.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='4a58f00bd6d025d629ce1f284963e098.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='1f2488813d21d85f3559ffcb24a47bc8.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='1bdc8e8701831662e72f531fdf440005.jpg') }}" alt="Головне зображення" class="listing-image">
+                <img src="{{ url_for('static', filename='0b5496104526cf9b5f4ab09084ba3593.jpg') }}" alt="Головне зображення" class="listing-image">
+            </div>
+            <a class="details-button" href="/listings/{{ listing.id }}">Детальніше</a>
+        </div>
+        {% endfor %}
+    </div>
+</main>
+{% endblock %}
